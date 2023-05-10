@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Search.css">
+</head>
+<body>
+<div class="container">
+   <form action="http://www.google.com/search" class="search" method="get" name="search" target="_blank">
+      <input name="sitesearch" type="hidden" value="" class="sitesearch">
+      <input  class="form-controls search" name="q" placeholder="search in google.com" required="required"  type="text">
+      <button class="button" type="submit">Search</button>
+    </form>
+</div>
+<div class="shortcuts">
+  <div class=row1>
+    <a href="https://chat.openai.com/c/acb07e88-c673-4466-b0e7-943fea6d4771">ChatGpt</a>
+    <a href="https://www.useblackbox.io/home-codesearch">BlackBox</a>
+    <a href="">WhatsApp</a>
+    <a href="">Tools</a>
+    <a href="https://www.bing.com/search?form=MY02AE&OCID=MY02AE&pl=launch&q=Bing+AI&showconv=1">Bing</a>
+  </div>
+  
+</div>
+<div class="timer">
+<p id="time"></p>
+</div>
+<script>
+    setInterval(function(){
+      var time=new Date();
+      var hrs=time.getHours();
+      var mins=time.getMinutes();
+      var sec=time.getSeconds();
+      document.getElementById("time").innerHTML=hrs+" : "+mins+" : "+sec;
+    },1000);
+     
+</script>
+
+</body>
+</html>

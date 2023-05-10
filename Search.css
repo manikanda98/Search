@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+.timer{
+    height: 100px;
+    width: 90px;
+    text-align: center;
+    background-color: aliceblue;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border-radius: 50px;
+    font-size: large;
+    background: transparent;
+    box-shadow: 5px 4px   1px rgb(255, 255, 255);
+    /* animation: load 1s linear infinite ; */
+
+}
+.timer p{
+ position: absolute;
+ top: 40%;
+ font-size:x-large;
+ white-space: nowrap;
+ transform: translate(-30%);
+ font-weight: bold;
+ -webkit-text-stroke:1px rgb(252, 252, 252);
+ color: transparent;
+}
+
+@keyframes load {
+   0%{
+       transform: rotate(10deg);
+    }
+   50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+body{
+    height: 100dvh;
+    max-width: 100dvw;
+    display: flex;
+    position: relative;
+    background-image: url("Images/wp7957458.jpg");
+    background-position: center;
+    background-size: cover;
+   
+}
+.container{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-500%);
+  
+}
+form{
+    display: flex;
+}
+.form-controls{
+    /* min-width: 500px; */
+      max-width: 500px;
+    
+      border-radius: 100px 0px 0px 20px;    
+      padding: 2px;
+      box-shadow: 2px 1px 10px rgb(255, 255, 255);
+      border: none;
+      
+}
+.button{
+    border-radius: 0px 50px 50px 0px;
+    padding: 10px;
+    border-color: transparent;
+    box-shadow: 1px 1px 10px rgb(255, 255, 255);
+    color: rgb(231, 13, 13);
+    background-color: transparent;
+}
+input {
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    background-color: transparent;
+}
+/* input:focus{
+  outline: pink;
+  padding: 10px;
+  border-bottom: 5px solid palegoldenrod;
+} */
+.shortcuts{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.shortcuts .row1 a{
+     font-size: x-large;
+     font-family: 'Times New Roman', Times, serif;
+     font-weight: 1000;
+     -webkit-text-stroke:1px rgb(252, 0, 0);
+     -webkit-background-clip:text;
+     background-clip: text;
+     color:transparent;
+     padding: 15px;
+     max-width: 200px;
+     min-width: 100px;
+     border: 2px solid transparent;
+     text-align: center;
+     position:relative;
+     left: 0%; 
+     margin-bottom: 50%;
+     text-decoration: none;
+     transition: 1s;
+     white-space: nowrap;
+     flex-wrap: wrap;
+  
+}
+.shortcuts a:hover{
+    /* font-weight: 500;
+    font-size: 50px; */
+    box-shadow: 0px 1px 20px  rgb(0, 0, 0);
+    transition: 1s;
+    color: aliceblue;
+}
+.shortcuts a::after{
+    content:'';
+     width: 0%;
+    height: 5%; 
+    background-color:red;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+    left: 0;
+ }
+ .shortcuts a::before{
+    content:'';
+    width: 0%;
+    height: 5%; 
+    background-color:red;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 1s;
+    
+ }
+ .shortcuts a:hover::after{
+  
+    transform: skewY(45deg);
+ }
+ 
+ .shortcuts a:hover::before{
+    
+    animation: line 1s linear infinite normal;
+ }

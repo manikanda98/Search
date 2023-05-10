@@ -1,0 +1,31 @@
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+.left{
+    position: absolute;
+    width: 50px;
+    height: 90px;
+    border: 2px solid black;
+    border-radius:100px 0px 0px 100px;
+    background: red;
+    border-right: red;
+    transform: skewY(45deg);
+    left: 41.60%;
+     
+}
+.right{
+    position: absolute;
+    left: 50%;
+    width: 50px;
+    height: 90px;
+    border-radius:0px 50px 50px 0px;
+    border: 2px solid black;
+    border-left: red;
+    background: red;
+    transform: skewY(-45deg);    
+    
+}
